@@ -1,0 +1,16 @@
+para crearlo y tenerlo en vuestro pc la primera vez:
+
+git clone https://gitlab.etsisi.upm.es/bt0073/citim21_01_battleship.git
+
+para añadir nuevas cosas:
+
+git add .
+git commit -m "mensaje"
+git push origin main
+
+para actualizar lo que hayan hecho otros:
+
+git pull
+
+para ver si hay cosas que has cambiado y tienes que subir:
+git status

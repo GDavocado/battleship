@@ -1,0 +1,22 @@
+package CITIM21_01.Controlador.Comandos;
+
+import CITIM21_01.Modelo.ModeloUsuario;
+
+public class ComandoIdiomaIngles extends Comando{
+
+
+    public ComandoIdiomaIngles(ModeloUsuario modeloUsuario) {
+        super(modeloUsuario);
+    }
+
+    @Override
+    public String aplicar() {
+        String usuario = controladorUsuario.getUsuarioActual();
+        return controladorUsuario.cambiarIdiomaIngles(usuario);
+    }
+
+    @Override
+    public String getNombre() {
+        return "CambiarIdiomaAIngles";
+    }
+}

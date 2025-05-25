@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Configuración de la conexión JDBC -->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/battleship_bd?useSSL=false</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">em1siCR7L2</property>
+
+        <!-- Configuración del pool de conexiones -->
+        <property name="connection.pool_size">5</property>
+
+        <!-- Dialecto SQL específico -->
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Mostrar SQL en consola -->
+        <property name="show_sql">true</property>
+
+        <!-- Opcional: formatear SQL -->
+        <property name="format_sql">true</property>
+
+        <!-- Opcional: política de creación de esquema -->
+        <property name="hbm2ddl.auto">update</property>
+
+        <!-- Mapeo de entidades -->
+        <mapping class="CITIM21_01.Modelo.Usuario"/>
+        <mapping class="CITIM21_01.Modelo.ModeloMovimiento"/>
+        <mapping class="CITIM21_01.Modelo.ModeloPuntuacion"/>
+    </session-factory>
+</hibernate-configuration>
